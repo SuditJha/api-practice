@@ -40,11 +40,80 @@ JSON Placeholder API?
 3. What are the available endpoints?
 /users, /products, /products/ some id of a product here
 
-
-
 ![image](<images/reqres.png>) 
 ![image](<images/http.png>) 
 ![image](<images/protocol.png>) 
 ![image](<images/componentOfRequest.png>)
 ![image](<images/path.png>) 
 ![image](images/METHODS.png)
+
+## REST
+
+1. How would you describe what REST is to your non-technical friend?
+A standarized way to have your computer, like your laptop, 
+get or send information to another computer (like a server)
+
+2. What does a RESTful API usually return in response to incoming requests?
+JSON data
+
+3. What kind of client devices can make use of a RESTful API?
+ALL OF THEM.
+
+
+
+
+
+![Alt text](images/rest1.png)
+![Alt text](images/rest2.png)
+![Alt text](images/rest3.png)
+![Alt text](images/rest4.png)
+desc
+![Alt text](images/rest5.png)
+desc
+![Alt text](images/rest6.png)
+
+  ### Stateless
+
+1. What does it mean for the server to be "Stateless"?
+It means that after serving the request of the client with appropriate resource it will immediately forget about the client.
+
+* In the Mike's Bikes example, what URL endpoint (and request method)
+  would you expect to use in order to accomplish the following:
+  
+    2. Retrieve a list of all the bikes that are sold?
+    /bikes
+    GET
+
+
+    3. Retrieve detailed information about the bike with an ID of 42?
+    /bikes/42
+    GET
+    
+    4. Update the price of the bike with an ID of 21?
+    /bikes/21
+    PUT
+    
+    5. Add a new bike to the list of bikes being sold?
+    /bikes
+    POST
+    
+    6. Remove the bike with an ID of 56 from the list of bikes?
+    /bikes/56
+    DELETE
+
+
+
+  ## Nested Resource
+
+  1. How is a nested resource URL like /bikes/123/reviews
+   different from an endpoint like /reviews?
+   /bikes/123/reviews - return an array of reviews about that specific bike
+   /reviews - return an array of all reviews on the site
+  
+2. What URL might you use to GET the review with an ID of 5 on the bike
+   with the ID of 123?
+   /bikes/123/reviews/5
+
+3. Describe a "URL Parameter" in your own words:
+   Variable inside the URL that acts as a placeholder for the real value
+   (Oftentimes they replace the ID of the resource)
